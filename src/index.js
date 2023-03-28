@@ -48,7 +48,7 @@ const lang = Object.values(languages).join('');
 const onInputChange = () => {
     renderCountryList([])
     countryInfo.replaceChildren();
-    const countryName = input.value;
+    const countryName = (input.value).trim();
        fetchCountries(countryName)
         .then((country) => {
             if (country.length === 1) {
